@@ -1,0 +1,10 @@
+*.pyc
+*.pid
+.swp
+/.project
+/.pydevproject
+/.settings
+/.idea
+/cache
+/eprograms/eprograms/settings/local.py
+.DS_Store

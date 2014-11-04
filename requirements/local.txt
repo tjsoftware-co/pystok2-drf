@@ -1,0 +1,13 @@
+-r base.txt
+
+Werkzeug==0.9.6
+django-debug-toolbar==1.2.1
+django-extensions==1.4.4
+flake8==2.2.5
+gnureadline==6.3.3
+ipython==2.3.0
+mccabe==0.2.1
+pep8==1.5.7
+pyflakes==0.8.1
+six==1.8.0
+sqlparse==0.1.13
