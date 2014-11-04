@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Projects/pystok2-drf/docs/relateddata.py.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v1">
+<meta name="syntax" content="python">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="macvim">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.String { color: #4a708b; }
+.Statement { color: #b03060; font-weight: bold; }
+.Comment { color: #0000ee; font-style: italic; }
+.Identifier { color: #458b74; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Statement">class</span> <span class="Identifier">ProgramChapterSerializer</span>(serializers.HyperlinkedModelSerializer):
+
+    <span class="Statement">class</span> <span class="Identifier">Meta</span>:
+        model = ProgramChapter
+
+
+<span class="Statement">class</span> <span class="Identifier">ProgramForSerializer</span>(serializers.HyperlinkedModelSerializer):
+
+    <span class="Statement">class</span> <span class="Identifier">Meta</span>:
+        model = ProgramFor
+
+
+<span class="Statement">class</span> <span class="Identifier">ProgramCategorySerializer</span>(serializers.HyperlinkedModelSerializer):
+
+    <span class="Statement">class</span> <span class="Identifier">Meta</span>:
+        model = ProgramCategory
+
+
+<span class="Comment"># Serializers define the API representation.</span>
+<span class="Statement">class</span> <span class="Identifier">ProgramSerializer</span>(serializers.HyperlinkedModelSerializer):
+
+    program_for = ProgramForSerializer(many=<span class="Identifier">True</span>)
+    program_category = ProgramCategorySerializer(many=<span class="Identifier">True</span>)
+    programchapter_set = ProgramChapterSerializer(many=<span class="Identifier">True</span>)
+
+    <span class="Statement">class</span> <span class="Identifier">Meta</span>:
+        model = Program
+        fields = (<span class="String">'name'</span>, <span class="String">'program_for'</span>, <span class="String">'program_category'</span>,
+                  <span class="String">'programchapter_set'</span>)
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Projects/pystok2-drf/docs/serializers.py.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v1">
+<meta name="syntax" content="python">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="macvim">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.String { color: #4a708b; }
+.Statement { color: #b03060; font-weight: bold; }
+.PreProc { color: #1874cd; }
+.Comment { color: #0000ee; font-style: italic; }
+.Identifier { color: #458b74; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> rest_framework <span class="PreProc">import</span> viewsets, routers, serializers
+<span class="PreProc">from</span> .models <span class="PreProc">import</span> Program, ProgramFor, ProgramCategory
+
+
+<span class="Comment"># Serializers define the API representation.</span>
+<span class="Statement">class</span> <span class="Identifier">ProgramSerializer</span>(serializers.HyperlinkedModelSerializer):
+    <span class="Statement">class</span> <span class="Identifier">Meta</span>:
+        model = Program
+        fields = (<span class="String">'name'</span>, <span class="String">'program_for'</span>, <span class="String">'program_category'</span>)
+
+
+<span class="Statement">class</span> <span class="Identifier">ProgramViewSet</span>(viewsets.ModelViewSet):
+    <span class="String">&quot;&quot;&quot;</span>
+<span class="String">    Basic API view for programs</span>
+<span class="String">    &quot;&quot;&quot;</span>
+    queryset = Program.objects.<span class="Identifier">all</span>()
+    serializer_class = ProgramSerializer
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

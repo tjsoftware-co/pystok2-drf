@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Projects/pystok2-drf/docs/settings.py.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v1">
+<meta name="syntax" content="python">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="macvim">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.String { color: #4a708b; }
+.Comment { color: #0000ee; font-style: italic; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+INSTALLED_APPS = (
+    <span class="String">'django.contrib.admin'</span>,
+    <span class="String">'django.contrib.auth'</span>,
+    <span class="String">'django.contrib.contenttypes'</span>,
+    <span class="String">'django.contrib.sessions'</span>,
+    <span class="String">'django.contrib.messages'</span>,
+    <span class="String">'django.contrib.staticfiles'</span>,
+
+    <span class="String">'eduprograms'</span>,
+
+    <span class="Comment"># add rest framework app</span>
+    <span class="String">'rest_framework'</span>,
+)
+
+REST_FRAMEWORK = {
+    <span class="Comment"># Use Django's standard `django.contrib.auth` permissions,</span>
+    <span class="Comment"># or allow read-only access for unauthenticated users.</span>
+    <span class="String">'DEFAULT_PERMISSION_CLASSES'</span>: (
+        <span class="String">'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'</span>,
+    )
+}
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

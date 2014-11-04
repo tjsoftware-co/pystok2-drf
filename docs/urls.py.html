@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Projects/pystok2-drf/docs/urls.py.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v1">
+<meta name="syntax" content="python">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="macvim">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.String { color: #4a708b; }
+.PreProc { color: #1874cd; }
+.Comment { color: #0000ee; font-style: italic; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> django.conf.urls <span class="PreProc">import</span> patterns, include, url
+<span class="PreProc">from</span> django.contrib <span class="PreProc">import</span> admin
+<span class="PreProc">from</span> eduprograms.api <span class="PreProc">import</span> router
+
+urlpatterns = patterns(
+    <span class="String">''</span>,
+    url(<span class="String">r'^admin/'</span>, include(admin.site.urls)),
+
+    <span class="Comment"># include api links</span>
+    url(<span class="String">r'^api/'</span>, include(router.urls)),
+    url(<span class="String">r'^api-auth/'</span>, include(<span class="String">'rest_framework.urls'</span>,
+                               namespace=<span class="String">'rest_framework'</span>))
+)
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
