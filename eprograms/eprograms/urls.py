@@ -9,5 +9,6 @@ urlpatterns = patterns(
     # include api links
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls',
-                               namespace='rest_framework'))
+                               namespace='rest_framework')),
+    url(r'^oauth2/', include('provider.oauth2.urls', namespace='oauth2')),
 )
