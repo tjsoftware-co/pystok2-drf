@@ -20,4 +20,4 @@ class ProgramAdmin(admin.ModelAdmin):
 
 admin.site.register(ProgramFor, ProgramForAdmin)
 admin.site.register(ProgramCategory, ProgramCategoryAdmin)
-admin.site.register(ProgramAdmin, ProgramAdmin)
+admin.site.register(Program, ProgramAdmin)
